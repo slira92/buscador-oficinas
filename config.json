@@ -1,0 +1,41 @@
+{
+  "busquedas": [
+    {
+      "zona": "Ciudad Empresarial",
+      "slug": "huechuraba-metropolitana",
+      "m2_min": 700, "m2_max": 1000, "pedido": "700 a 1.000 m²",
+      "_nota_zona": "Entra si la direccion o el titulo dicen 'texto_zona' o si las coordenadas caen dentro de 'caja' (lat_min, lat_max, lon_min, lon_max).",
+      "texto_zona": "ciudad empresarial",
+      "caja": [-33.3990, -33.3800, -70.6300, -70.6000]
+    }
+  ],
+  "operaciones": ["arriendo"],
+  "tipo_portal": "oficina",
+
+  "_nota_tolerancias": "La busqueda en el portal se hace con un rango ampliado (tolerancia_busqueda) para tener mercado de referencia; 'cercano' = hasta tolerancia_cercano fuera del rango pedido.",
+  "tolerancia_busqueda": 0.35,
+  "tolerancia_cercano": 0.15,
+
+  "pesos_puntaje": {
+    "_nota": "Puntaje 0-100. precio_vs_mercado: UF/m2 de arriendo vs mediana de la zona; calce_m2: 100 dentro del rango, baja a 0 a 25% fuera; estacionamientos: 2,5 o mas cada 100 m2 = 100, 0 = 0; habilitacion: habilitada 100, semi 70, planta libre 50, obra gruesa 30, sin info 50; edificio: 5 anos o menos = 100, 35 o mas = 0, +20 si tiene certificacion LEED.",
+    "precio_vs_mercado": 35,
+    "calce_m2": 25,
+    "estacionamientos": 15,
+    "habilitacion": 15,
+    "edificio": 10
+  },
+
+  "uf_respaldo": 41300,
+  "dolar_respaldo": 980,
+  "pausa_entre_requests_seg": [1.5, 3.5],
+  "refrescar_detalle_cada_dias": 7,
+
+  "publicar_github": {
+    "_nota": "Tras cada pasada sube dashboard.html a la rama gh-pages del repo (link para compartir).",
+    "activo": false,
+    "repo": "slira92/buscador-oficinas",
+    "url": "https://slira92.github.io/buscador-oficinas/"
+  },
+
+  "notificaciones": { "windows": true }
+}
