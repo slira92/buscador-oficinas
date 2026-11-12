@@ -32,7 +32,7 @@
 
   "publicar_github": {
     "_nota": "Tras cada pasada sube dashboard.html a la rama gh-pages del repo (link para compartir).",
-    "activo": false,
+    "activo": true,
     "repo": "slira92/buscador-oficinas",
     "url": "https://slira92.github.io/buscador-oficinas/"
   },
